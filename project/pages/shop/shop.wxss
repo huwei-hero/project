@@ -1,0 +1,25 @@
+.search{
+  display: flex;
+  flex-direction: row;
+}
+.searchimg{
+  width: 50rpx;
+  height: 50rpx;
+  
+}
+.icon_css {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+.choose {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50rpx;
+}
+.icon_img {
+  width: 250rpx;
+  height: 250rpx;
+}

@@ -1,0 +1,30 @@
+swiper{
+  height: 350rpx;
+  width:100%;
+}
+swiper image{
+  height: 500rpx;
+  width:100%;
+}
+.choose {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 25rpx;
+}
+
+.icon_css {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  align-items: center;
+}
+
+.icon_img {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.icon_text {
+  justify-content:center,
+}

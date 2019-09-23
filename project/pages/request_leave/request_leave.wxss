@@ -1,0 +1,7 @@
+.moudule{
+  margin-top: 22rpx;
+}
+
+checkbox{
+  width: 33%;
+}

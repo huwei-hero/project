@@ -1,0 +1,12 @@
+/* pages/love/love.wxss */
+
+.img1{
+  height: 420rpx;
+  width: 320rpx;
+}
+
+.img2{
+  height: 70rpx;
+  width: 70rpx;
+  margin-left: 20rpx;
+}

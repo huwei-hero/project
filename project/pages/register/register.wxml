@@ -1,0 +1,11 @@
+<view>
+  <form bindsubmit='formSubmit'>
+    <picker name="sdept" bindchange='choose_sdept' value='{{index1}}' range='{{sdepts}}'>系别选择:{{sdepts[index1]}}</picker>
+    <picker name="classes"bindchange='choose_clas' value='{{index2}}' range='{{classes}}'>班级选择:{{classes[index2]}}</picker>
+    <input name="sno" placeholder='请填写您的学号'></input>
+    <input name="name" placeholder='请填写您的姓名'></input>
+    <input name="tel" placeholder='请填写您的现用手机号'></input>
+    <picker name="ins" bindchange='choose_ins' value='{{index3}}' range='{{instructor}}'>导员绑定:{{instructor[index3]}}</picker>
+    <button form-type='submit'>确认绑定</button>
+  </form>
+</view>

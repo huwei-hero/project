@@ -1,0 +1,18 @@
+<view>
+  <view class='search'>
+    <input style="width:650rpx"placeholder='请输入您要搜索的宝贝'></input>
+    <image class="searchimg" src="/images/search.jpg" bindtap='search'></image>
+  </view>
+  <view>
+    <view style="display:flex;flex-direction:row;">
+      <block wx:for="{{kind}}" wx:for-item="item" wx:key="key">
+        <view style='width:16%'><text>{{item}}</text></view>
+      </block>
+    </view>
+    <view>
+      <block wx:for="{{goods}}"wx:for-item="item"wx:key="key">
+        
+      </block>
+    </view>
+  </view>
+</view>

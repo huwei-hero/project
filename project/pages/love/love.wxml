@@ -1,0 +1,11 @@
+<view>
+  <block wx:for="{{list}}" wx:for-item="item" wx:key="key"> 
+    <view>
+      <view><text bindtap='look' id='{{item.id}}'>{{item.text}}</text></view>
+      <view>
+        <image bindtap="good "class="img2" src='/images/good.jpg'></image>
+        <image bindtap="look" class="img2" src='/images/content.jpg'></image>
+      </view>
+    </view>
+  </block>
+</view>
