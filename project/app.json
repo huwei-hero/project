@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/request_leave/request_leave",
     "pages/home/home",
+    "pages/request_leave/request_leave",
     "pages/register/register",
     "pages/love/love",
     "pages/love/loveitem/loveitem",

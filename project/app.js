@@ -29,6 +29,7 @@ App({
               wx.setStorageSync('tel', res.data[0].tel)
               wx.setStorageSync('lev', res.data[0].lev)
               wx.setStorageSync('sno', res.data[0].sno)
+              wx.setStorageSync('ins', res.data[0].ins)
             }
             console.log(res);               //后台获取openid测试
           }

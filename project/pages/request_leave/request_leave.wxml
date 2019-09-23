@@ -1,40 +1,43 @@
 <view>
-<text>当前所剩请假次数---{{}}次</text>
+  <text>当前所剩请假次数---{{havetime}}次</text>
   <form bindsubmit="submit">
     <view class='moudule'>
-      <text>专业班级：{{}}</text>
+      <text>专业班级：{{sdept}}{{classes}}班</text>
     </view>
     <view class='moudule'>
-      <text>学号：{{}}</text>
+      <text>学号：{{sno}}</text>
     </view>
     <view class='moudule'>
-      <text>名字：{{}}</text>
+      <text>名字：{{name}}</text>
     </view>
-    <view class='moudule'>
-      <picker mode="date" value="{{startdate}}" start="2019-01-01" end="2019-12-31" bindchange='setstart'>
-        <text>起始时间:{{startdate}}</text>
-      </picker>
+    <view wx:if="{{havetime>0&&havetime<=3}}">
+      <view class='moudule'>
+        <picker name="sdate" mode="date" value="{{startdate}}" start="2019-01-01" end="2019-12-31" bindchange='setstart'>
+          <text>起始时间:{{startdate}}</text>
+        </picker>
+      </view>
+      <view class='moudule'>
+        <picker name="edate" mode="date" value="{{enddate}}" start="2019-01-01" end="2019-12-31" bindchange='setend'>
+          <text>截止时间:{{enddate}}</text>
+        </picker>
+      </view>
+      <view class='moudule'>请假事由：
+        <textarea  name="seasion" placeholder="请在此填写请假原因，不超过50字"></textarea>
+      </view>
+      <view class='moudule'>
+        <text>审批导员：{{ins}}</text>
+      </view>
+      <checkbox>老师1</checkbox>
+      <checkbox>老师2</checkbox>
+      <checkbox>老师3</checkbox>
+      <checkbox>老师4</checkbox>
+      <checkbox>老师5</checkbox>
+      <checkbox>老师6</checkbox>
+      <checkbox>老师7</checkbox>
+      <checkbox>老师8</checkbox>
+      <checkbox>老师9</checkbox>
+      <button form-type='submit'>提交</button>
     </view>
-    <view class='moudule'>
-      <picker mode="date" value="{{enddate}}" start="2019-01-01" end="2019-12-31" bindchange='setend'>
-        <text>截止时间:{{enddate}}</text>
-      </picker>
-    </view>
-    <view class='moudule'>请假事由：
-      <textarea placeholder="请在此填写请假原因，不超过50字" name="beizhu"></textarea>
-    </view>
-    <view class='moudule'>
-      <text>审批导员：{{}}</text>
-    </view>
-    <checkbox>老师1</checkbox>
-    <checkbox>老师2</checkbox>
-    <checkbox>老师3</checkbox>
-    <checkbox>老师4</checkbox>
-    <checkbox>老师5</checkbox>
-    <checkbox>老师6</checkbox>
-    <checkbox>老师7</checkbox>
-    <checkbox>老师8</checkbox>
-    <checkbox>老师9</checkbox>
-    <button form-type='submit'>提交</button>
+    <text wx:if="{{havetime==0}}">您的请假次数已达上限!!!本周不能再请假了哦</text>
   </form>
 </view>
