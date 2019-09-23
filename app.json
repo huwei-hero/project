@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/request_leave/request_leave",
+    "pages/home/home",
+    "pages/register/register",
+    "pages/love/love",
+    "pages/love/loveitem/loveitem",
+    "pages/love/write/write",
+    "pages/shop/shop",
+    "pages/find/find",
+    "pages/shop/detail/detail",
+    "pages/shop/shopitem/shopitem",
+    "pages/my/my",
+    "pages/sign/sign"
+  ],
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#4A6141",
+    "color": "#333",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/home2.png",
+        "selectedIconPath": "/images/home1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/my2.png",
+        "selectedIconPath": "/images/my1.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "友家校园",
+    "navigationBarTextStyle": "black"
+  }
+}
