@@ -21,10 +21,11 @@ swiper image{
 }
 
 .icon_img {
-  width: 150rpx;
-  height: 150rpx;
+  width: 80rpx;
+  height: 80rpx;
 }
 
 .icon_text {
-  justify-content:center,
+  justify-content:center;
+  font-size:30rpx;
 }

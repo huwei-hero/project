@@ -11,37 +11,37 @@ Page({
       {
         id: 1,
         name:"request_leave",
-        img: "/images/leave.png",
+        img: "/images/lease00.png",
         text:"请假管理"
       },
       {
         id: 2,
         name:"sign",
-        img: "/images/sign.png",
+        img: "/images/daka01.png",
         text: "考勤打卡"
       },
       {
         id: 3,
         name:"shop",
-        img: "/images/shop.png",
+        img: "/images/shop01.png",
         text: "理工商城"
       },
       {
         id: 4,
         name:"love",
-        img: "/images/love.png",
+        img: "/images/love01.png",
         text: "为爱表白"
       },
       {
         id: 5,
         name:"find",
-        img: "/images/lost.png",
+        img: "/images/lost01.png",
         text: "失物招领"
       },
       {
         id: 6,
         name:"my",
-        img: "/images/ours.png",
+        img: "/images/us00.png",
         text: "关于我们"
       }
     ]

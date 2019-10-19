@@ -9,7 +9,7 @@
   </view>
   <!--欢迎话语-->
   <view style='margin-top:25rpx;'>
-    <text>欢迎回来：{{username}}</text>
+    <text class='icon_text'>欢迎回来：{{username}}</text>
   </view>
   <!--功能选择模块-->
   <view class='choose'>

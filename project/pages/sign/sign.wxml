@@ -1,12 +1,21 @@
 <view>
-  <view class='message'>
-    <text>您的位置为:----------- {{position}}</text>
-    <text>签到项目：------------ {{item}}</text>
-    <text>请进行人脸识别 :     </text>
+  <image class='img' src="/images/face1.png"></image>
+
+  <view>
+    <view class='view'>
+      <text class='name'>目前位置:{{position}}</text>
+    </view>
+    <view class='view'>
+      <text class='name'>签到项目:{{item}}</text>
+    </view>
+    <view class='view'>
+      <text class='name'>人脸识别</text>
+      <image class='camera' src='/images/camera.png'></image>
+    </view>
   </view>
 
   <view>
-    <camera device-position="front" style="width: 100%; height: 500px; "></camera>
-    <button bindtap="sign">识别报道</button>
+    <camera device-position="front" style="width: 100%; height: 220px; "></camera>
+    <button bindtap="sign">识别打卡</button>
   </view>
 </view>

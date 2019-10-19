@@ -40,5 +40,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "友家校园",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
