@@ -16,7 +16,7 @@ Page({
   },
   test:function(res){
     wx.request({
-      url: 'https://www.friendplace.cn/facecheck.php',
+      url: 'https://www.friendplace.cn/frienplace/facecheck.php',
       method:'POST',
       header: { "Content-Type": "application/x-www-form-urlencoded" },
       success:function(res){

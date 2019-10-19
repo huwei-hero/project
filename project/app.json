@@ -3,6 +3,7 @@
     "pages/home/home",
     "pages/request_leave/request_leave",
     "pages/register/register",
+    "pages/register/getFace/getFace",
     "pages/love/love",
     "pages/love/loveitem/loveitem",
     "pages/love/write/write",
@@ -10,8 +11,8 @@
     "pages/find/find",
     "pages/shop/detail/detail",
     "pages/shop/shopitem/shopitem",
-    "pages/my/my",
-    "pages/sign/sign"
+    "pages/sign/sign",
+    "pages/my/my"
   ],
   "tabBar": {
     "borderStyle": "white",

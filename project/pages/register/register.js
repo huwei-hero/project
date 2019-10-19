@@ -64,9 +64,9 @@ Page({
       success: function(e) {
         console.log(e)
         if (e.data == 1) {
-          wx.switchTab({
-            url: '/pages/home/home',
-          })
+         wx.navigateTo({
+           url: '/pages/register/getFace/getFace',
+         })
           //console.log(this.data.name)      
         }
       }

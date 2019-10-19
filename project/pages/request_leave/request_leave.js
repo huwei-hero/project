@@ -1,11 +1,5 @@
-// pages/request_leave/request_leave.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    
     sdept:wx.getStorageSync('sdept'),
     classes : wx.getStorageSync('classes'),
     sno:wx.getStorageSync('sno'),
@@ -20,15 +14,13 @@ Page({
     wx.request({
       url: 'https://www.friendplace.cn/project/leave_request/findHaveTime.php',
       data:{
-        sno:wx.getStorageSync('sno')
+        sno:wx.getStorageSync('sno'),
+        sdept:this.data.sdept
       },
       success:function(res){
-        console.log(res.data.length)
-        if(res.data.length==0){
-          that.setData({havetime:3})
-        }else{
-          that.setData({ havetime: res.data[0].havetime})
-        }
+        console.log(res)
+        that.setData({havetime:res.data.havetime})
+        that.setData({teachers:res.data.teachers})
       }
     })
   },
@@ -70,7 +62,6 @@ Page({
         title: '信息要填写完整',
       })
     }
-    
   },
   setstart:function(res){
     console.log(res)

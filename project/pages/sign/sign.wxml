@@ -1,6 +1,4 @@
 <view>
-  <image class='img' src="/images/face.png"></image>
- 
   <view class='message'>
     <text>您的位置为:----------- {{position}}</text>
     <text>签到项目：------------ {{item}}</text>
@@ -8,7 +6,7 @@
   </view>
 
   <view>
-    <camera device-position="front" style="width: 100%; height: 220px; "></camera>
+    <camera device-position="front" style="width: 100%; height: 500px; "></camera>
     <button bindtap="sign">识别报道</button>
   </view>
 </view>

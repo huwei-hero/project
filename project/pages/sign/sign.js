@@ -5,6 +5,9 @@ Page({
     item: "晚自习",
     face: "5"
   },
+  onLoad: function(res) {
+
+  },
   sign: function(res) {
     var that = this;
     that.getFace();
@@ -14,46 +17,45 @@ Page({
     const ctx = wx.createCameraContext();
     ctx.takePhoto({
       success: function(res) {
-        console.log(res)
-        that.setData({
-          face: res.tempImagePath
-        })
-        that.upload();
-       // console.log(that.data.face)
+        //console.log(res)
+        that.upload_img(res.tempImagePath);
       }
     })
-   setTimeout(function(){
-      that.faceCheck();
-    },3000)
   },
-  upload:function(res){
+  upload_img: function(e) {
+    console.log(e)
+    var imgPath = e;
     wx.uploadFile({
-      url: 'https://www.friendplace.cn/friendplace/upload.php',
-      filePath: this.data.face,
+      url: 'https://www.friendplace.cn/project/sign/faceCheck.php',
+      filePath: imgPath,
       name: 'test',
-      success:function(res){
-        console.log(res)
+      formData: {
+        sno: wx.getStorageSync('sno')
+      },
+      success: function(res) {
+        var result = JSON.parse(res.data);
+        var confidence = result.confidence
+        var thresholds = result.thresholds['1e-4']
+        console.log(result)
+        var flag = confidence > thresholds ? true : false;
+        if (flag) {
+          wx.showToast({
+            title: '签到成功',
+          })
+          setTimeout(function() {
+            wx.switchTab({
+              url: '/pages/home/home',
+            })
+          }, 1500)
+        } else {
+          wx.showToast({
+            title: '信息不符',
+          })
+          wx.showToast({
+            title: '请重新签到',
+          })
+        }
       }
     })
-  },
-  faceCheck: function(res) {
-     wx.request({
-       url: 'https://www.friendplace.cn/friendplace/facecheck.php',
-       success:function(res){
-         //console.log(res)
-         var confidence = res.data.confidence
-         var thresholds = res.data.thresholds['1e-4']
-         if(confidence>thresholds){
-           wx.showToast({
-             title: '签到成功',
-           })
-         }
-         else{
-           wx.showToast({
-             title: '信息不可信',
-           })
-         }
-       }
-     })
   },
 })
