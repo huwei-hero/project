@@ -1,3 +1,4 @@
 <view>
   <button bindtap="uploadimg">test</button>
+  
 </view>

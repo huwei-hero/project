@@ -1,5 +1,5 @@
 App({
-  onLaunch: function (res) {
+  getOpenid: function (res) {
     wx.login({
       success(res) {
         wx.request({
@@ -34,6 +34,33 @@ App({
             console.log(res);               //后台获取openid测试
           }
         })
+      }
+    })
+  },
+  findHaveSign:function(res){
+    var that = this;
+    wx.setStorageSync('SignName', '暂无签到活动')
+    wx.request({
+      url: 'https://www.friendplace.cn/project/sign/findSign.php',
+      method: 'post',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        classes: wx.getStorageSync('classes')
+      },
+      success: function (res) {
+        //console.log(res.data)
+        if (res.data.length != 0) {
+          wx.setStorageSync('haveSign', true);
+          wx.setStorageSync('signid',res.data[0].id);       
+          wx.setStorageSync('SignName', res.data[0].name)
+          wx.setStorageSync('etime',res.data[0].etime);
+          wx.setStorageSync('latitude', res.data[0].latitude);
+          wx.setStorageSync('longitude', res.data[0].longitude);
+        }else{
+          wx.setStorageSync('haveSign', false);
+        }
       }
     })
   },

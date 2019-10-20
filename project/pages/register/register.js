@@ -64,7 +64,7 @@ Page({
       success: function(e) {
         console.log(e)
         if (e.data == 1) {
-         wx.navigateTo({
+         wx.redirectTo({
            url: '/pages/register/getFace/getFace',
          })
           //console.log(this.data.name)      
